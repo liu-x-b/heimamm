@@ -1,5 +1,5 @@
 <template>
-<div>是df</div>
+    <router-view></router-view>
 </template>
 
 <script>
