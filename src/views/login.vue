@@ -14,14 +14,14 @@
           </el-input>
         </el-form-item>
         <el-form-item>
-          <el-input v-model="form.name" placeholder="请输入密码">
+          <el-input v-model="form.password" placeholder="请输入密码" show-password>
             <i slot="prefix" class="el-input__icon el-icon-lock"></i>
           </el-input>
         </el-form-item>
         <el-form-item>
           <el-col :span="16">
             <div class="grid-content bg-purple">
-              <el-input v-model="form.name" placeholder="请输入验证码">
+              <el-input v-model="form.verify" placeholder="请输入验证码">
                 <i slot="prefix" class="el-input__icon el-icon-key"></i>
               </el-input>
             </div>
@@ -57,6 +57,8 @@ export default {
     return {
       form: {
         name: "",
+        password: "",
+        verify: "",
         region: "",
         date1: "",
         date2: "",
@@ -96,14 +98,12 @@ export default {
       box-sizing: border-box;
       .bth-elm {
         width: 100%;
+        margin: 0;
         margin-bottom: 20px;
       }
       .er-img {
         width: 100%;
         height: 40px;
-      }
-      .bth-elm + .bth-elm {
-        margin: 0;
       }
     }
     .top {
